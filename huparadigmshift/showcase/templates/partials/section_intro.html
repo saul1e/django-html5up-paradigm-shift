@@ -1,0 +1,16 @@
+<section class="intro">
+	<header>
+		<h1>{{site_contents.intro_headline}}</h1>
+		<p>{{site_contents.intro_paragraph | safe}}</p>
+		<ul class="actions">
+			<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+		</ul>
+	</header>
+	<div class="content">
+	{% if site_contents.intro_img %}
+		<span class="image fill" data-position="center"><img src="{{site_contents.intro_img.url}}" alt="" /></span>
+	{% else %}
+		<span class="image fill" data-position="center"><img src="https://picsum.photos/1200" alt="" /></span>
+	{% endif %}
+	</div>
+</section>

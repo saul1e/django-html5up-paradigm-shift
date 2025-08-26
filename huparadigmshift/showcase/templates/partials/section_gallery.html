@@ -1,0 +1,46 @@
+{% load static %}
+<section>
+	<header>
+		<h2>{{site_contents.section_gallery_main_headline}}</h2>
+	</header>
+	<div class="content">
+		<p>{{site_contents.section_gallery_main_paragraph | safe}}</p>
+        
+		<!-- Section -->
+			<section>
+				<header>
+					<h3>{{site_contents.section_gallery_secondary_headline}}</h3>
+					<p>{{site_contents.section_gallery_secondary_paragraph | safe}}</p>
+				</header>
+				<div class="content">
+					<div class="gallery">
+						<!--a href="{% static 'images/gallery/fulls/01.jpg' %}" class="landscape"><img src="{% static 'images/gallery/thumbs/01.jpg' %}" alt="" /></a-->
+	
+						{% if site_contents.section_gallery_img_upper_landscape %}
+							<a href="{{site_contents.section_gallery_img_upper_landscape.url}}" class="landscape"><img src="{{site_contents.section_gallery_img_upper_landscape.url}}" alt="Img. Upper Landscape"></a>
+						{% else %}
+							<a href="https://picsum.photos/1280/720" class="landscape"><img src="https://picsum.photos/960/540" alt="Placeholder Img. Upper Landscape"></a>
+						{% endif %}
+
+						{% if site_contents.section_gallery_img_left_vertical %}
+							<a href="{{site_contents.section_gallery_img_left_vertical.url}}" class="landscape"><img src="{{site_contents.section_gallery_img_left_vertical.url}}" alt="Img. Middle-left Vertical"></a>
+						{% else %}
+							<a href="https://picsum.photos/720"><img src="https://picsum.photos/540" alt="Placeholder Img. Middle-left Vertical"></a>
+						{% endif %}
+
+						{% if site_contents.section_gallery_img_right_vertical %}
+							<a href="{{site_contents.section_gallery_img_right_vertical.url}}" class="landscape"><img src="{{site_contents.section_gallery_img_right_vertical.url}}" alt="Img. Middle-right Vertical"></a>
+						{% else %}
+							<a href="https://picsum.photos/720"><img src="https://picsum.photos/540" alt="Placeholder Img. Middle-right Vertical"></a>
+						{% endif %}
+
+						{% if site_contents.section_gallery_img_lower_landscape %}
+							<a href="{{site_contents.section_gallery_img_lower_landscape.url}}" class="landscape"><img src="{{site_contents.section_gallery_img_lower_landscape.url}}" alt="Img. Upper Landscape"></a>
+						{% else %}
+							<a href="https://picsum.photos/1280/720" class="landscape"><img src="https://picsum.photos/960/540" alt="Placeholder Img. Upper Landscape"></a>
+						{% endif %}
+					
+					</div>
+				</div>
+			</section>
+</section>

@@ -8,6 +8,7 @@
 /__pycache__
 */db.sqlite3
 media
+*/migrations
 
 # Backup files # 
 *.bak 
@@ -143,3 +144,4 @@ GitHub.sublime-settings
 huparadigmshift/db.sqlite3
 *.sqlite3
 huparadigmshift/huparadigmshift/__pycache__/settings.cpython-310.pyc
+/huparadigmshift/showcase/migrations

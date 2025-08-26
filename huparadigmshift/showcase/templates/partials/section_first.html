@@ -1,0 +1,13 @@
+<section id="first">
+	<header>
+		<h2>{{site_contents.section_first_headline | safe}}</h2>
+	</header>
+	<div class="content">
+		<p>{{site_contents.section_first_paragraph | safe}}</p>
+			{% if site_contents.section_first_img %}
+				<span class="image main" data-position="center"><img src="{{site_contents.section_first_img.url}}" alt="" /></span>
+			{% else %}
+				<span class="image main" data-position="center"><img src="https://picsum.photos/1200" alt="" /></span>
+			{% endif %}
+	</div>
+</section>

@@ -2,9 +2,13 @@ from django.core.mail import EmailMessage
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import ContactForm
+from .models import ModelSiteContents
 
 # Create your views here.
 def view_index(request):
+
+    contents = ModelSiteContents.objects.first()
+
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -24,7 +28,9 @@ def view_index(request):
             return redirect('success')
     else:
         form = ContactForm()
+
     return render(request,"index.html",{
+        "site_contents": contents,
         "contact_form" : form,
     })
 
